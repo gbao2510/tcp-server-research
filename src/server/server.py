@@ -1,81 +1,90 @@
-import socket
-import json
-import struct
+"""TCP Server xử lý nhiều Client đồng thời bằng mô hình Thread Pool.
+
+Core Server Dev: Ngô Gia Bảo
+Protocol Integration: Nguyễn Gia Bảo (Protocol Dev)
+"""
+from __future__ import annotations
+
+import argparse
 import logging
+import socket
+import sys
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 
-# Cấu hình log để dễ theo dõi trên Terminal
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(threadName)s - %(message)s')
+# Đảm bảo import được protocol dù chạy từ thư mục nào
+_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
 
-HOST = '127.0.0.1'
-PORT = 9999
-MAX_WORKERS = 100 
+from protocol import (
+    DEFAULT_HOST,
+    DEFAULT_PORT,
+    DEFAULT_TIMEOUT,
+    MAX_PAYLOAD_SIZE,
+    ConnectionClosedError,
+    InvalidMessageError,
+    MessageTooLargeError,
+    create_response,
+    recv_message,
+    send_message,
+)
 
-def recvall(sock, n):
-    """Hàm đảm bảo đọc đủ số byte từ kết nối"""
-    data = bytearray()
-    while len(data) < n:
-        packet = sock.recv(n - len(data))
-        if not packet:
-            return None
-        data.extend(packet)
-    return data
+# Cấu hình log để theo dõi trên Terminal
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(threadName)s - %(message)s")
 
-def handle_client(conn, addr):
-    """Xử lý từng Client độc lập"""
+HOST = DEFAULT_HOST
+PORT = DEFAULT_PORT
+MAX_WORKERS = 100
+
+
+def handle_client(conn: socket.socket, addr: tuple[str, int]) -> None:
+    """Xử lý từng Client độc lập thông qua mô-đun protocol chuẩn Length-Prefix + JSON."""
     logging.info(f"[+] Client kết nối: {addr}")
-    conn.settimeout(10.0) 
-    
+    conn.settimeout(DEFAULT_TIMEOUT)
+
     try:
         while True:
-            # Bóc tách độ dài gói tin
-            raw_msglen = recvall(conn, 4)
-            if not raw_msglen:
-                break
-            
-            msglen = struct.unpack('>I', raw_msglen)[0]
-            if msglen > 2 * 1024 * 1024: # Chặn payload quá lớn
-                break
-
-            # Đọc payload
-            data = recvall(conn, msglen)
-            if not data:
-                break
-            
-            # Phản hồi
+            # Nhận và bóc tách gói tin theo giao thức
             try:
-                request = json.loads(data.decode('utf-8'))
-                response = {
-                    "requestId": request.get("requestId"),
-                    "payload": request.get("payload"),
-                    "status": "success"
-                }
-                
-                res_data = json.dumps(response).encode('utf-8')
-                res_msg = struct.pack('>I', len(res_data)) + res_data
-                conn.sendall(res_msg)
+                request = recv_message(conn, allow_eof=False, max_payload_size=MAX_PAYLOAD_SIZE)
+            except ConnectionClosedError:
+                # Client chủ động đóng kết nối sạch
+                break
+            except (MessageTooLargeError, InvalidMessageError) as err:
+                logging.warning(f"[-] Lỗi gói tin từ {addr}: {err}")
+                break
 
-            except json.JSONDecodeError:
-                break 
-                
+            # Trích xuất dữ liệu request (hỗ trợ cả id và requestId)
+            req_id = request.get("id") or request.get("requestId", "")
+            payload = request.get("payload", "")
+
+            # Phản hồi echo chuẩn hóa giao thức
+            response = create_response(request_id=req_id, payload=payload, status="ok")
+            send_message(conn, response)
+
     except socket.timeout:
         logging.warning(f"[-] Bị timeout ở kết nối {addr}")
-    except Exception:
-        pass
+    except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
+        logging.info(f"[-] Kết nối bị ngắt đột ngột: {addr}")
+    except Exception as err:
+        logging.error(f"[!] Lỗi không xác định với {addr}: {err}")
     finally:
         conn.close()
         logging.info(f"[-] Đóng kết nối {addr}")
 
-def start_server():
+
+def start_server(host: str = HOST, port: int = PORT, max_workers: int = MAX_WORKERS) -> None:
+    """Khởi động TCP Server với Thread Pool."""
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    
-    server_socket.bind((HOST, PORT))
-    server_socket.listen(100) 
-    
-    logging.info(f"[*] Server đang chạy tại {HOST}:{PORT}")
-    
-    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+
+    server_socket.bind((host, port))
+    server_socket.listen(max_workers)
+
+    logging.info(f"[*] Server đang chạy tại {host}:{port} (Max Workers: {max_workers})")
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
         try:
             while True:
                 conn, addr = server_socket.accept()
@@ -85,5 +94,16 @@ def start_server():
         finally:
             server_socket.close()
 
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="TCP Multi-threaded Server")
+    parser.add_argument("--host", default=DEFAULT_HOST, help=f"Host bind (mặc định: {DEFAULT_HOST})")
+    parser.add_argument("--port", type=int, default=DEFAULT_PORT, help=f"Cổng lắng nghe (mặc định: {DEFAULT_PORT})")
+    parser.add_argument("--workers", type=int, default=MAX_WORKERS, help=f"Số luồng tối đa trong Pool (mặc định: {MAX_WORKERS})")
+    args = parser.parse_args()
+
+    start_server(args.host, args.port, args.workers)
+
+
 if __name__ == "__main__":
-    start_server()
+    main()
