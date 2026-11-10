@@ -179,3 +179,15 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+experiments/raw_data/*
+!experiments/raw_data/.gitkeep
+
+# IDE & OS Cache
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Word/PowerPoint/PDF
+*.tmp
+~$*.docx
+~$*.pptx
