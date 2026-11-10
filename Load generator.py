@@ -20,7 +20,7 @@ import time
 from dataclasses import dataclass
 
 from client import Client
-from protocol import ProtocolError
+from protocol.protocol import ProtocolError
 
 PAYLOAD_SIZE = 1024  # 1KB theo yêu cầu
 

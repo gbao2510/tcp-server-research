@@ -8,7 +8,7 @@ from __future__ import annotations
 import socket
 from typing import Any
 
-from protocol import recv_message, send_message
+from protocol.protocol import recv_message, send_message
 
 
 class Client:

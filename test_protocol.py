@@ -19,7 +19,7 @@ import threading
 import unittest
 from typing import Any
 
-from protocol import (
+from protocol.protocol import (
     DEFAULT_MAX_PAYLOAD_SIZE,
     HEADER_FORMAT,
     HEADER_SIZE,
