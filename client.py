@@ -8,16 +8,11 @@ from __future__ import annotations
 import socket
 from typing import Any
 
-from protocol import DEFAULT_HOST, DEFAULT_PORT, DEFAULT_TIMEOUT, recv_message, send_message
+from protocol import recv_message, send_message
 
 
 class Client:
-    def __init__(
-        self,
-        host: str = DEFAULT_HOST,
-        port: int = DEFAULT_PORT,
-        timeout: float = DEFAULT_TIMEOUT,
-    ) -> None:
+    def __init__(self, host: str = "127.0.0.1", port: int = 9000, timeout: float = 10.0) -> None:
         self.host, self.port, self.timeout = host, port, timeout
         self.sock: socket.socket | None = None
 
@@ -38,10 +33,7 @@ class Client:
         if self.sock is None:
             raise RuntimeError("Chưa kết nối: hãy gọi connect() trước")
         send_message(self.sock, message)
-        resp = recv_message(self.sock)
-        if resp is None:
-            raise RuntimeError("Server đã ngắt kết nối mà không gửi response")
-        return resp
+        return recv_message(self.sock)
 
     def __enter__(self) -> "Client":
         self.connect()

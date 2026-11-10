@@ -7,8 +7,8 @@ Cuối cùng in số request thành công / thất bại.
 (Đo latency p95, throughput, CPU và vẽ biểu đồ là việc của Metrics / Analytics
  ở các tuần sau; chương trình này chỉ cần chạy đúng và đếm kết quả cơ bản.)
 
-    python "Load generator.py" --clients 10 --duration 5
-    python "Load generator.py" --clients 1 --requests 100 --port 9999
+    python load_generator.py --clients 10 --duration 5
+    python load_generator.py --clients 1 --requests 100 --port 9000
 """
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ import time
 from dataclasses import dataclass
 
 from client import Client
-from protocol import DEFAULT_HOST, DEFAULT_PORT, ProtocolError
+from protocol import ProtocolError
 
 PAYLOAD_SIZE = 1024  # 1KB theo yêu cầu
 
@@ -138,8 +138,8 @@ def run(
 
 def main() -> int:
     p = argparse.ArgumentParser(description="Load generator cơ bản cho TCP server")
-    p.add_argument("--host", default=DEFAULT_HOST)
-    p.add_argument("--port", type=int, default=DEFAULT_PORT, help="Cổng TCP server (mặc định 9999)")
+    p.add_argument("--host", default="127.0.0.1")
+    p.add_argument("--port", type=int, default=9000)
     p.add_argument("--clients", type=int, default=1, help="số client đồng thời (kịch bản: 1, 10, 50)")
     p.add_argument("--duration", type=float, default=5.0, help="thời gian chạy (giây)")
     p.add_argument("--requests", type=int, default=None, help="số request mỗi client (bỏ qua --duration)")
