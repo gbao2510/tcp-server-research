@@ -13,11 +13,20 @@ Kiểm thử toàn diện:
 from __future__ import annotations
 
 import json
+import os
 import socket
 import struct
+import sys
 import threading
 import unittest
+from pathlib import Path
 from typing import Any
+
+ROOT_DIR = Path(__file__).resolve().parent
+SRC_DIR = ROOT_DIR / "src"
+for d in (str(ROOT_DIR), str(SRC_DIR)):
+    if d not in sys.path:
+        sys.path.insert(0, d)
 
 from protocol.protocol import (
     DEFAULT_MAX_PAYLOAD_SIZE,

@@ -6,7 +6,15 @@ Một Client = một kết nối TCP bền, gửi request theo giao thức Lengt
 from __future__ import annotations
 
 import socket
+import sys
+from pathlib import Path
 from typing import Any
+
+ROOT_DIR = Path(__file__).resolve().parent
+SRC_DIR = ROOT_DIR / "src"
+for d in (str(ROOT_DIR), str(SRC_DIR)):
+    if d not in sys.path:
+        sys.path.insert(0, d)
 
 from protocol.protocol import recv_message, send_message
 
