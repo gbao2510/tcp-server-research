@@ -1,4 +1,4 @@
-﻿"""Module Giao thức Truyền thông (Protocol Module) - Protocol Dev.
+"""Module Giao thức Truyền thông (Protocol Module) - Protocol Dev.
 
 Cung cấp cơ chế đóng gói (framing) và bóc tách gói tin dựa trên Length-Prefix
 kết hợp định dạng JSON UTF-8 cho kết nối TCP, bẫy lỗi dữ liệu rác,
