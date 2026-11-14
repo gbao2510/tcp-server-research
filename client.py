@@ -25,7 +25,9 @@ class Client:
         self.sock: socket.socket | None = None
 
     def connect(self) -> None:
+        self.close()
         self.sock = socket.create_connection((self.host, self.port), timeout=self.timeout)
+        self.sock.settimeout(self.timeout)
         self.sock.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
 
     def close(self) -> None:
@@ -42,6 +44,16 @@ class Client:
             raise RuntimeError("Chưa kết nối: hãy gọi connect() trước")
         send_message(self.sock, message)
         return recv_message(self.sock)
+
+    def echo(self, payload: str, request_id: Any = "echo") -> dict[str, Any]:
+        return self.request({"id": request_id, "type": "echo", "payload": payload})
+
+    def __enter__(self) -> "Client":
+        self.connect()
+        return self
+
+    def __exit__(self, *exc) -> None:
+        self.close()
 
     def __enter__(self) -> "Client":
         self.connect()
