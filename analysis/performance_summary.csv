@@ -1,0 +1,4 @@
+clients,total_requests,requests_ok,requests_failed,throughput_rps,latency_avg_ms,latency_p95_ms,latency_p99_ms,latency_min_ms,latency_max_ms,cpu_avg_percent
+1,20,20,0,59.49,0.455,0.617,0.627,0.309,0.63,45.03
+10,200,200,0,620.87,2.169,4.372,5.231,0.531,5.598,35.58
+50,1000,1000,0,1484.23,6.584,11.733,13.511,0.256,14.803,76.37

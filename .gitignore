@@ -181,6 +181,8 @@ cython_debug/
 .cursorindexingignore
 experiments/raw_data/*
 !experiments/raw_data/.gitkeep
+!experiments/raw_data/*.csv
+!experiments/raw_data/*.json
 
 # IDE & OS Cache
 .vscode/

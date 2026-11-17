@@ -1,0 +1,32 @@
+{
+  "summary": {
+    "available": true,
+    "backend": "windows_kernel32",
+    "samples_count": 5,
+    "cpu_avg": 76.37,
+    "cpu_min": 60.71,
+    "cpu_max": 83.33
+  },
+  "samples": [
+    {
+      "timestamp_s": 0.109,
+      "cpu_percent": 82.14
+    },
+    {
+      "timestamp_s": 0.218,
+      "cpu_percent": 83.33
+    },
+    {
+      "timestamp_s": 0.343,
+      "cpu_percent": 77.08
+    },
+    {
+      "timestamp_s": 0.453,
+      "cpu_percent": 78.57
+    },
+    {
+      "timestamp_s": 0.562,
+      "cpu_percent": 60.71
+    }
+  ]
+}
