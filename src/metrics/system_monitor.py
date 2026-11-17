@@ -179,6 +179,18 @@ class CpuMonitor:
             "cpu_max": round(max(self.samples), 2),
         }
 
+    def save_csv(self, filepath: str | Any) -> None:
+        """Lưu toàn bộ mẫu đo CPU ra file CSV."""
+        from .collector import write_cpu_csv
+        # Gọi hàm write_cpu_csv để ghi dữ liệu ra file
+        write_cpu_csv(filepath, cpu_monitor=self)
+
+    def save_json(self, filepath: str | Any) -> None:
+        """Lưu toàn bộ mẫu đo CPU ra file JSON kèm thống kê tóm tắt."""
+        from .collector import write_cpu_json
+        # Gọi hàm write_cpu_json để ghi dữ liệu ra file
+        write_cpu_json(filepath, cpu_monitor=self)
+
     def __enter__(self) -> CpuMonitor:
         self.start()
         return self

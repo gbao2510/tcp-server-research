@@ -1,0 +1,1602 @@
+[
+  {
+    "client_id": 10,
+    "seq": 0,
+    "t_start": 0.006346,
+    "latency_ms": 3.5183,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 0,
+    "t_start": 0.006421,
+    "latency_ms": 1.7314,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 0,
+    "t_start": 0.00649,
+    "latency_ms": 2.2031,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 0,
+    "t_start": 0.006557,
+    "latency_ms": 2.1192,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 0,
+    "t_start": 0.006614,
+    "latency_ms": 2.0152,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 0,
+    "t_start": 0.006682,
+    "latency_ms": 1.9742,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 0,
+    "t_start": 0.006746,
+    "latency_ms": 2.7946,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 0,
+    "t_start": 0.007041,
+    "latency_ms": 2.6887,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 0,
+    "t_start": 0.007134,
+    "latency_ms": 1.3928,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 0,
+    "t_start": 0.007419,
+    "latency_ms": 1.7063,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 1,
+    "t_start": 0.01462,
+    "latency_ms": 1.9265,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 1,
+    "t_start": 0.014726,
+    "latency_ms": 1.9671,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 1,
+    "t_start": 0.014803,
+    "latency_ms": 1.8191,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 1,
+    "t_start": 0.014863,
+    "latency_ms": 1.3754,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 1,
+    "t_start": 0.014915,
+    "latency_ms": 1.1536,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 1,
+    "t_start": 0.01496,
+    "latency_ms": 1.0729,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 1,
+    "t_start": 0.015026,
+    "latency_ms": 0.5961,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 1,
+    "t_start": 0.029358,
+    "latency_ms": 2.185,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 1,
+    "t_start": 0.029453,
+    "latency_ms": 2.1481,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 1,
+    "t_start": 0.029495,
+    "latency_ms": 2.2879,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 2,
+    "t_start": 0.029555,
+    "latency_ms": 2.4691,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 2,
+    "t_start": 0.0296,
+    "latency_ms": 2.2135,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 2,
+    "t_start": 0.029659,
+    "latency_ms": 1.5392,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 2,
+    "t_start": 0.029698,
+    "latency_ms": 2.2112,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 2,
+    "t_start": 0.02973,
+    "latency_ms": 1.3042,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 2,
+    "t_start": 0.029769,
+    "latency_ms": 1.8985,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 2,
+    "t_start": 0.029982,
+    "latency_ms": 2.1154,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 3,
+    "t_start": 0.04431,
+    "latency_ms": 1.2452,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 3,
+    "t_start": 0.044419,
+    "latency_ms": 0.9794,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 3,
+    "t_start": 0.044475,
+    "latency_ms": 1.559,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 3,
+    "t_start": 0.044551,
+    "latency_ms": 1.5492,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 3,
+    "t_start": 0.044604,
+    "latency_ms": 1.2011,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 3,
+    "t_start": 0.044663,
+    "latency_ms": 1.6666,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 2,
+    "t_start": 0.044878,
+    "latency_ms": 0.9565,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 3,
+    "t_start": 0.045045,
+    "latency_ms": 1.2,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 2,
+    "t_start": 0.045135,
+    "latency_ms": 1.1746,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 2,
+    "t_start": 0.045603,
+    "latency_ms": 0.7611,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 3,
+    "t_start": 0.059592,
+    "latency_ms": 1.921,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 4,
+    "t_start": 0.059692,
+    "latency_ms": 1.3361,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 4,
+    "t_start": 0.059745,
+    "latency_ms": 0.9958,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 3,
+    "t_start": 0.059776,
+    "latency_ms": 1.8531,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 4,
+    "t_start": 0.059814,
+    "latency_ms": 1.6268,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 3,
+    "t_start": 0.059862,
+    "latency_ms": 1.0802,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 4,
+    "t_start": 0.059901,
+    "latency_ms": 1.3382,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 4,
+    "t_start": 0.059944,
+    "latency_ms": 0.8486,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 4,
+    "t_start": 0.060032,
+    "latency_ms": 1.6867,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 4,
+    "t_start": 0.060182,
+    "latency_ms": 1.1647,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 5,
+    "t_start": 0.074778,
+    "latency_ms": 2.6605,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 4,
+    "t_start": 0.074912,
+    "latency_ms": 1.0617,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 4,
+    "t_start": 0.074996,
+    "latency_ms": 2.525,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 5,
+    "t_start": 0.075055,
+    "latency_ms": 1.7172,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 5,
+    "t_start": 0.075109,
+    "latency_ms": 1.3997,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 5,
+    "t_start": 0.075147,
+    "latency_ms": 2.0822,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 5,
+    "t_start": 0.075223,
+    "latency_ms": 1.7518,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 5,
+    "t_start": 0.075289,
+    "latency_ms": 2.0773,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 4,
+    "t_start": 0.07543,
+    "latency_ms": 1.4392,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 5,
+    "t_start": 0.075516,
+    "latency_ms": 1.6758,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 6,
+    "t_start": 0.090855,
+    "latency_ms": 3.0419,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 5,
+    "t_start": 0.09097,
+    "latency_ms": 2.7599,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 6,
+    "t_start": 0.091029,
+    "latency_ms": 2.9177,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 6,
+    "t_start": 0.091108,
+    "latency_ms": 1.9654,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 5,
+    "t_start": 0.091175,
+    "latency_ms": 2.0564,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 6,
+    "t_start": 0.091227,
+    "latency_ms": 2.2741,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 5,
+    "t_start": 0.091289,
+    "latency_ms": 2.0663,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 6,
+    "t_start": 0.091339,
+    "latency_ms": 1.2087,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 6,
+    "t_start": 0.09138,
+    "latency_ms": 1.3375,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 6,
+    "t_start": 0.091668,
+    "latency_ms": 1.752,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 6,
+    "t_start": 0.105899,
+    "latency_ms": 2.1668,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 7,
+    "t_start": 0.105996,
+    "latency_ms": 2.1254,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 7,
+    "t_start": 0.106061,
+    "latency_ms": 1.4893,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 6,
+    "t_start": 0.106106,
+    "latency_ms": 1.8873,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 6,
+    "t_start": 0.106156,
+    "latency_ms": 1.4556,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 7,
+    "t_start": 0.106199,
+    "latency_ms": 1.6701,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 7,
+    "t_start": 0.106275,
+    "latency_ms": 1.6504,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 7,
+    "t_start": 0.106307,
+    "latency_ms": 0.8034,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 7,
+    "t_start": 0.106418,
+    "latency_ms": 1.6641,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 7,
+    "t_start": 0.106607,
+    "latency_ms": 1.5787,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 8,
+    "t_start": 0.120827,
+    "latency_ms": 2.8001,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 8,
+    "t_start": 0.120928,
+    "latency_ms": 2.3921,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 7,
+    "t_start": 0.121014,
+    "latency_ms": 1.0135,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 8,
+    "t_start": 0.121068,
+    "latency_ms": 2.4242,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 8,
+    "t_start": 0.121133,
+    "latency_ms": 2.2291,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 8,
+    "t_start": 0.121183,
+    "latency_ms": 2.0726,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 8,
+    "t_start": 0.121224,
+    "latency_ms": 2.3112,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 7,
+    "t_start": 0.121281,
+    "latency_ms": 2.2861,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 8,
+    "t_start": 0.121329,
+    "latency_ms": 1.9533,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 7,
+    "t_start": 0.121488,
+    "latency_ms": 1.8922,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 8,
+    "t_start": 0.135975,
+    "latency_ms": 2.0037,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 9,
+    "t_start": 0.136071,
+    "latency_ms": 1.6728,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 8,
+    "t_start": 0.136197,
+    "latency_ms": 1.9302,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 9,
+    "t_start": 0.136306,
+    "latency_ms": 1.6133,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 9,
+    "t_start": 0.136397,
+    "latency_ms": 2.5717,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 9,
+    "t_start": 0.136483,
+    "latency_ms": 2.2767,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 9,
+    "t_start": 0.136554,
+    "latency_ms": 2.3602,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 8,
+    "t_start": 0.136611,
+    "latency_ms": 2.5164,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 9,
+    "t_start": 0.136827,
+    "latency_ms": 1.8673,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 9,
+    "t_start": 0.137049,
+    "latency_ms": 2.1131,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 10,
+    "t_start": 0.15203,
+    "latency_ms": 1.733,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 10,
+    "t_start": 0.152171,
+    "latency_ms": 1.4765,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 10,
+    "t_start": 0.152243,
+    "latency_ms": 1.46,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 9,
+    "t_start": 0.152302,
+    "latency_ms": 2.3465,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 10,
+    "t_start": 0.152345,
+    "latency_ms": 2.4481,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 9,
+    "t_start": 0.152425,
+    "latency_ms": 2.0381,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 10,
+    "t_start": 0.152503,
+    "latency_ms": 2.3613,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 9,
+    "t_start": 0.152591,
+    "latency_ms": 2.2512,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 10,
+    "t_start": 0.152677,
+    "latency_ms": 2.0648,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 10,
+    "t_start": 0.152741,
+    "latency_ms": 1.5992,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 11,
+    "t_start": 0.168116,
+    "latency_ms": 2.6154,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 11,
+    "t_start": 0.168244,
+    "latency_ms": 1.8487,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 10,
+    "t_start": 0.168316,
+    "latency_ms": 1.295,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 11,
+    "t_start": 0.168373,
+    "latency_ms": 2.2553,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 11,
+    "t_start": 0.168415,
+    "latency_ms": 1.6499,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 10,
+    "t_start": 0.168476,
+    "latency_ms": 1.4934,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 11,
+    "t_start": 0.168525,
+    "latency_ms": 1.8632,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 11,
+    "t_start": 0.168607,
+    "latency_ms": 1.8247,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 10,
+    "t_start": 0.168741,
+    "latency_ms": 1.5329,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 11,
+    "t_start": 0.170117,
+    "latency_ms": 0.6634,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 11,
+    "t_start": 0.183873,
+    "latency_ms": 2.2562,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 12,
+    "t_start": 0.184039,
+    "latency_ms": 2.6276,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 12,
+    "t_start": 0.184098,
+    "latency_ms": 4.0985,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 12,
+    "t_start": 0.184145,
+    "latency_ms": 2.398,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 12,
+    "t_start": 0.184216,
+    "latency_ms": 3.5472,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 12,
+    "t_start": 0.184283,
+    "latency_ms": 2.1726,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 11,
+    "t_start": 0.184324,
+    "latency_ms": 3.1717,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 12,
+    "t_start": 0.184629,
+    "latency_ms": 2.4136,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 11,
+    "t_start": 0.184779,
+    "latency_ms": 3.3264,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 12,
+    "t_start": 0.187142,
+    "latency_ms": 0.9148,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 13,
+    "t_start": 0.199796,
+    "latency_ms": 3.7877,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 12,
+    "t_start": 0.199948,
+    "latency_ms": 2.5215,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 13,
+    "t_start": 0.200024,
+    "latency_ms": 3.9945,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 12,
+    "t_start": 0.200072,
+    "latency_ms": 1.3999,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 13,
+    "t_start": 0.20017,
+    "latency_ms": 3.4593,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 13,
+    "t_start": 0.200251,
+    "latency_ms": 3.4961,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 13,
+    "t_start": 0.200462,
+    "latency_ms": 2.8257,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 13,
+    "t_start": 0.200794,
+    "latency_ms": 2.9265,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 13,
+    "t_start": 0.201157,
+    "latency_ms": 2.5259,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 12,
+    "t_start": 0.202206,
+    "latency_ms": 1.8422,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 14,
+    "t_start": 0.215977,
+    "latency_ms": 5.5984,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 13,
+    "t_start": 0.216176,
+    "latency_ms": 5.1254,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 14,
+    "t_start": 0.216254,
+    "latency_ms": 5.3597,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 14,
+    "t_start": 0.216357,
+    "latency_ms": 4.9934,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 13,
+    "t_start": 0.216437,
+    "latency_ms": 5.2292,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 13,
+    "t_start": 0.216601,
+    "latency_ms": 5.0411,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 14,
+    "t_start": 0.216737,
+    "latency_ms": 4.7281,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 14,
+    "t_start": 0.216928,
+    "latency_ms": 4.616,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 14,
+    "t_start": 0.217332,
+    "latency_ms": 4.3587,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 14,
+    "t_start": 0.217578,
+    "latency_ms": 3.3602,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 15,
+    "t_start": 0.230548,
+    "latency_ms": 2.748,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 15,
+    "t_start": 0.230652,
+    "latency_ms": 3.8322,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 15,
+    "t_start": 0.23072,
+    "latency_ms": 3.4264,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 14,
+    "t_start": 0.230842,
+    "latency_ms": 3.613,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 14,
+    "t_start": 0.230927,
+    "latency_ms": 1.6048,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 15,
+    "t_start": 0.231005,
+    "latency_ms": 2.8246,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 15,
+    "t_start": 0.231128,
+    "latency_ms": 3.2436,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 15,
+    "t_start": 0.231294,
+    "latency_ms": 2.9912,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 14,
+    "t_start": 0.231365,
+    "latency_ms": 1.7411,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 15,
+    "t_start": 0.231622,
+    "latency_ms": 1.8825,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 16,
+    "t_start": 0.246128,
+    "latency_ms": 2.7979,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 16,
+    "t_start": 0.246253,
+    "latency_ms": 1.4558,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 16,
+    "t_start": 0.246335,
+    "latency_ms": 2.4419,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 16,
+    "t_start": 0.246394,
+    "latency_ms": 2.2156,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 16,
+    "t_start": 0.246446,
+    "latency_ms": 2.0867,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 15,
+    "t_start": 0.246511,
+    "latency_ms": 1.3823,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 16,
+    "t_start": 0.246574,
+    "latency_ms": 2.2566,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 15,
+    "t_start": 0.246664,
+    "latency_ms": 1.5959,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 15,
+    "t_start": 0.246748,
+    "latency_ms": 1.9775,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 16,
+    "t_start": 0.247145,
+    "latency_ms": 2.0533,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 17,
+    "t_start": 0.261342,
+    "latency_ms": 1.4871,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 17,
+    "t_start": 0.261429,
+    "latency_ms": 2.2138,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 17,
+    "t_start": 0.261498,
+    "latency_ms": 1.8104,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 17,
+    "t_start": 0.261581,
+    "latency_ms": 1.5933,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 16,
+    "t_start": 0.261639,
+    "latency_ms": 1.9017,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 17,
+    "t_start": 0.26171,
+    "latency_ms": 1.3584,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 16,
+    "t_start": 0.261766,
+    "latency_ms": 1.8004,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 17,
+    "t_start": 0.261876,
+    "latency_ms": 1.644,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 16,
+    "t_start": 0.262087,
+    "latency_ms": 1.3801,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 17,
+    "t_start": 0.263187,
+    "latency_ms": 0.5314,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 17,
+    "t_start": 0.276059,
+    "latency_ms": 1.6134,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 18,
+    "t_start": 0.276177,
+    "latency_ms": 1.2767,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 18,
+    "t_start": 0.276272,
+    "latency_ms": 0.7588,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 18,
+    "t_start": 0.276338,
+    "latency_ms": 1.3003,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 18,
+    "t_start": 0.2764,
+    "latency_ms": 1.935,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 17,
+    "t_start": 0.276438,
+    "latency_ms": 1.8451,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 18,
+    "t_start": 0.276493,
+    "latency_ms": 1.8746,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 18,
+    "t_start": 0.276566,
+    "latency_ms": 1.1401,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 18,
+    "t_start": 0.277116,
+    "latency_ms": 1.1202,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 17,
+    "t_start": 0.277281,
+    "latency_ms": 0.9196,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 3,
+    "seq": 19,
+    "t_start": 0.290849,
+    "latency_ms": 1.8657,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 7,
+    "seq": 19,
+    "t_start": 0.290959,
+    "latency_ms": 2.6464,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 18,
+    "t_start": 0.291026,
+    "latency_ms": 3.4156,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 18,
+    "t_start": 0.29113,
+    "latency_ms": 3.514,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 2,
+    "seq": 19,
+    "t_start": 0.291195,
+    "latency_ms": 3.0908,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 18,
+    "t_start": 0.291312,
+    "latency_ms": 3.4338,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 4,
+    "seq": 19,
+    "t_start": 0.291349,
+    "latency_ms": 1.0558,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 19,
+    "t_start": 0.292015,
+    "latency_ms": 1.3359,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 5,
+    "seq": 19,
+    "t_start": 0.292561,
+    "latency_ms": 2.0477,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 6,
+    "seq": 19,
+    "t_start": 0.292788,
+    "latency_ms": 1.9026,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 9,
+    "seq": 19,
+    "t_start": 0.307032,
+    "latency_ms": 4.7112,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 8,
+    "seq": 19,
+    "t_start": 0.307153,
+    "latency_ms": 3.9371,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 10,
+    "seq": 19,
+    "t_start": 0.307252,
+    "latency_ms": 5.1625,
+    "ok": true,
+    "error": ""
+  }
+]

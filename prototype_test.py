@@ -23,7 +23,16 @@ for d in (str(ROOT_DIR), str(SRC_DIR)):
 
 from client import Client
 from protocol.protocol import ProtocolError
-from src.metrics import CpuMonitor, Sample, format_summary, summarize, write_csv
+from src.metrics import (
+    CpuMonitor,
+    Sample,
+    format_summary,
+    summarize,
+    write_cpu_csv,
+    write_cpu_json,
+    write_csv,
+    write_json,
+)
 from src.server.server import HOST as DEFAULT_HOST, PORT as DEFAULT_PORT, handle_client
 
 PAYLOAD_1KB = "".join(random.choices(string.ascii_letters + string.digits, k=1024))
@@ -171,10 +180,23 @@ def run_prototype(
         print("    - Giám sát CPU không khả dụng trên môi trường này.")
     print("=" * 60)
 
-    # 5. Xuất file CSV
-    csv_file = output_csv or (ROOT_DIR / "experiments" / "raw_data" / "prototype_test.csv")
+    # 5. Xuất file dữ liệu thô ra cả CSV và JSON (Nhiệm vụ của Data Analytics Dev)
+    raw_data_dir = ROOT_DIR / "experiments" / "raw_data"
+    csv_file = output_csv or (raw_data_dir / "prototype_test.csv")
+    json_file = csv_file.with_suffix(".json")
     write_csv(samples, csv_file)
-    print(f"\n[+] Đã lưu dữ liệu thô ({len(samples)} mẫu) vào file:\n    -> {csv_file}")
+    write_json(samples, json_file)
+
+    cpu_csv_file = raw_data_dir / "prototype_cpu.csv"
+    cpu_json_file = raw_data_dir / "prototype_cpu.json"
+    write_cpu_csv(cpu_csv_file, cpu_monitor=cpu_monitor)
+    write_cpu_json(cpu_json_file, cpu_monitor=cpu_monitor)
+
+    print(f"\n[+] Đã lưu dữ liệu thô ({len(samples)} mẫu) vào các file:")
+    print(f"    -> Latency CSV : {csv_file}")
+    print(f"    -> Latency JSON: {json_file}")
+    print(f"    -> CPU CSV     : {cpu_csv_file}")
+    print(f"    -> CPU JSON    : {cpu_json_file}")
 
     return 0 if summary["requests_failed"] == 0 and summary["requests_ok"] > 0 else 1
 

@@ -20,7 +20,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from client import Client
-from src.metrics import Sample, format_summary, summarize, write_csv
+from src.metrics import Sample, format_summary, summarize, write_csv, write_json
 from src.protocol import ProtocolError
 
 PAYLOAD_SIZE = 1024  # 1KB theo yêu cầu
@@ -182,6 +182,7 @@ def main() -> int:
     p.add_argument("--timeout", type=float, default=5.0, help="timeout mỗi request (giây)")
     p.add_argument("--warmup", type=float, default=0.0, help="loại N giây đầu khỏi thống kê")
     p.add_argument("--csv", type=Path, default=None, help="ghi dữ liệu thô từng request ra CSV")
+    p.add_argument("--json", type=Path, default=None, help="ghi dữ liệu thô từng request ra JSON")
     args = p.parse_args()
     if args.clients < 1:
         p.error("--clients phải >= 1")
@@ -195,6 +196,9 @@ def main() -> int:
     if args.csv:
         write_csv(r.samples, args.csv)
         print(f"Đã ghi {len(r.samples)} mẫu -> {args.csv}")
+    if args.json:
+        write_json(r.samples, args.json)
+        print(f"Đã ghi {len(r.samples)} mẫu -> {args.json}")
     return 0 if r.summary["requests_failed"] == 0 and r.connected == r.clients else 1
 
 

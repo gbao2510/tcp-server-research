@@ -8,6 +8,7 @@ Chức năng:
 from __future__ import annotations
 
 import csv
+import json
 import threading
 from dataclasses import dataclass
 from pathlib import Path
@@ -171,6 +172,194 @@ def read_csv(filepath: str | Path) -> list[Sample]:
                 )
             )
     return samples
+
+
+def write_json(samples: list[Sample], filepath: str | Path) -> None:
+    """Ghi danh sách dữ liệu thô (thời gian phản hồi từng request) ra file JSON.
+
+    Mỗi phần tử trong mảng JSON đại diện cho 1 request với các thông tin:
+    - client_id: Định danh client gửi request
+    - seq: Số thứ tự request của client đó
+    - t_start: Thời điểm gửi request tính từ lúc bắt đầu test (giây)
+    - latency_ms: Thời gian phản hồi RTT (mili-giây)
+    - ok: Request thành công hay không (True/False)
+    - error: Mô tả lỗi nếu thất bại
+    """
+    p = Path(filepath)
+    # Tự động tạo thư mục chứa nếu chưa tồn tại
+    p.parent.mkdir(parents=True, exist_ok=True)
+
+    # Chuyển đổi danh sách đối tượng Sample thành danh sách dict
+    data = [
+        {
+            "client_id": s.client_id,
+            "seq": s.seq,
+            "t_start": round(s.t_start, 6),
+            "latency_ms": round(s.latency_ms, 4),
+            "ok": s.ok,
+            "error": s.error,
+        }
+        for s in samples
+    ]
+
+    # Mở file và ghi dữ liệu dưới dạng JSON (thụt lề 2 khoảng trắng để dễ đọc)
+    with open(p, mode="w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def read_json(filepath: str | Path) -> list[Sample]:
+    """Đọc dữ liệu thô từ file JSON và chuyển đổi lại thành danh sách đối tượng Sample."""
+    p = Path(filepath)
+    # Mở file JSON để đọc nội dung
+    with open(p, mode="r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Khởi tạo danh sách kết quả chứa các đối tượng Sample
+    samples: list[Sample] = []
+    # Duyệt qua từng bản ghi trong JSON
+    for item in data:
+        samples.append(
+            Sample(
+                client_id=int(item["client_id"]),
+                seq=int(item["seq"]),
+                t_start=float(item["t_start"]),
+                latency_ms=float(item["latency_ms"]),
+                ok=bool(item["ok"]),
+                error=item.get("error", ""),
+            )
+        )
+    return samples
+
+
+def write_cpu_csv(
+    filepath: str | Path,
+    timestamps: list[float] | None = None,
+    cpu_percent: list[float] | None = None,
+    cpu_monitor: Any = None,
+) -> None:
+    """Ghi dữ liệu thô mức sử dụng CPU theo thời gian ra file CSV.
+
+    Có thể truyền trực tiếp (timestamps, cpu_percent) hoặc truyền đối tượng cpu_monitor.
+    Cột xuất: [timestamp_s, cpu_percent]
+    """
+    p = Path(filepath)
+    # Tạo thư mục cha nếu chưa có
+    p.parent.mkdir(parents=True, exist_ok=True)
+
+    # Nếu người dùng truyền đối tượng cpu_monitor thì lấy dữ liệu từ đó ra
+    if cpu_monitor is not None:
+        timestamps = getattr(cpu_monitor, "timestamps", [])
+        cpu_percent = getattr(cpu_monitor, "samples", [])
+
+    ts_list = timestamps or []
+    cpu_list = cpu_percent or []
+
+    # Mở file CSV và ghi từng dòng dữ liệu
+    with open(p, mode="w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        # Ghi dòng tiêu đề
+        writer.writerow(["timestamp_s", "cpu_percent"])
+        # Duyệt và ghi các cặp mốc thời gian và % CPU tương ứng
+        for t, cpu in zip(ts_list, cpu_list):
+            writer.writerow([f"{t:.4f}", f"{cpu:.2f}"])
+
+
+def write_cpu_json(
+    filepath: str | Path,
+    timestamps: list[float] | None = None,
+    cpu_percent: list[float] | None = None,
+    cpu_monitor: Any = None,
+) -> None:
+    """Ghi dữ liệu thô mức sử dụng CPU ra file JSON kèm thống kê tóm tắt (avg, min, max)."""
+    p = Path(filepath)
+    # Tạo thư mục cha nếu chưa có
+    p.parent.mkdir(parents=True, exist_ok=True)
+
+    summary_data = {}
+    if cpu_monitor is not None:
+        timestamps = getattr(cpu_monitor, "timestamps", [])
+        cpu_percent = getattr(cpu_monitor, "samples", [])
+        if hasattr(cpu_monitor, "summary"):
+            summary_data = cpu_monitor.summary()
+
+    ts_list = timestamps or []
+    cpu_list = cpu_percent or []
+
+    # Nếu chưa có summary từ cpu_monitor, tự tính toán các chỉ số cơ bản
+    if not summary_data and cpu_list:
+        summary_data = {
+            "samples_count": len(cpu_list),
+            "cpu_avg": round(sum(cpu_list) / len(cpu_list), 2),
+            "cpu_min": round(min(cpu_list), 2),
+            "cpu_max": round(max(cpu_list), 2),
+        }
+
+    # Đóng gói danh sách mẫu đo CPU
+    samples_data = [
+        {"timestamp_s": round(t, 4), "cpu_percent": round(c, 2)}
+        for t, c in zip(ts_list, cpu_list)
+    ]
+
+    full_data = {
+        "summary": summary_data,
+        "samples": samples_data,
+    }
+
+    # Ghi dữ liệu ra file JSON
+    with open(p, mode="w", encoding="utf-8") as f:
+        json.dump(full_data, f, indent=2, ensure_ascii=False)
+
+
+def export_all_raw_data(
+    output_dir: str | Path,
+    scenario_name: str,
+    samples: list[Sample],
+    cpu_monitor: Any = None,
+    summary: dict[str, Any] | None = None,
+) -> dict[str, Path]:
+    """Hàm tiện ích giúp xuất TOÀN BỘ dữ liệu thô (Thời gian phản hồi + CPU) ra cả CSV và JSON.
+
+    - raw_data_<scenario_name>.csv: Thời gian phản hồi từng request (CSV)
+    - raw_data_<scenario_name>.json: Thời gian phản hồi từng request (JSON)
+    - cpu_<scenario_name>.csv: Mức sử dụng CPU theo thời gian (CSV)
+    - cpu_<scenario_name>.json: Mức sử dụng CPU chi tiết kèm tóm tắt (JSON)
+    - summary_<scenario_name>.json: Bản tóm tắt các chỉ số hiệu năng (JSON)
+    """
+    out_path = Path(output_dir)
+    out_path.mkdir(parents=True, exist_ok=True)
+
+    saved_files: dict[str, Path] = {}
+
+    # 1. Lưu dữ liệu thô Latency ra file CSV
+    latency_csv = out_path / f"raw_data_{scenario_name}.csv"
+    write_csv(samples, latency_csv)
+    saved_files["latency_csv"] = latency_csv
+
+    # 2. Lưu dữ liệu thô Latency ra file JSON
+    latency_json = out_path / f"raw_data_{scenario_name}.json"
+    write_json(samples, latency_json)
+    saved_files["latency_json"] = latency_json
+
+    # 3. Lưu dữ liệu thô CPU nếu có cpu_monitor
+    if cpu_monitor is not None:
+        # Xuất CPU dạng CSV
+        cpu_csv = out_path / f"cpu_{scenario_name}.csv"
+        write_cpu_csv(cpu_csv, cpu_monitor=cpu_monitor)
+        saved_files["cpu_csv"] = cpu_csv
+
+        # Xuất CPU dạng JSON
+        cpu_json = out_path / f"cpu_{scenario_name}.json"
+        write_cpu_json(cpu_json, cpu_monitor=cpu_monitor)
+        saved_files["cpu_json"] = cpu_json
+
+    # 4. Lưu tóm tắt hiệu năng nếu có
+    if summary is not None:
+        summary_json = out_path / f"summary_{scenario_name}.json"
+        with open(summary_json, mode="w", encoding="utf-8") as f:
+            json.dump(summary, f, indent=2, ensure_ascii=False)
+        saved_files["summary_json"] = summary_json
+
+    return saved_files
 
 
 class MetricsCollector:

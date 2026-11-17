@@ -1,0 +1,28 @@
+{
+  "total_requests": 1000,
+  "requests_ok": 1000,
+  "requests_failed": 0,
+  "elapsed_s": 0.674,
+  "throughput": 1484.23,
+  "throughput_rps": 1484.23,
+  "latency_avg_ms": 6.584,
+  "latency_avg": 6.584,
+  "latency_p95_ms": 11.733,
+  "latency_p95": 11.733,
+  "latency_p99_ms": 13.511,
+  "latency_p99": 13.511,
+  "latency_min_ms": 0.256,
+  "latency_min": 0.256,
+  "latency_max_ms": 14.803,
+  "latency_max": 14.803,
+  "errors": {},
+  "cpu": {
+    "available": true,
+    "backend": "windows_kernel32",
+    "samples_count": 5,
+    "cpu_avg": 76.37,
+    "cpu_min": 60.71,
+    "cpu_max": 83.33
+  },
+  "clients": 50
+}
