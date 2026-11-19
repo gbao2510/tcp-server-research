@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0d1117;
+  color: #e2e8f0;
+  padding: 28px 24px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.55rem;
+  color: #7dd3fc;
+  margin-bottom: 6px;
+  letter-spacing: 0.4px;
+}
+
+.sub {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #475569;
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #161b27;
+  border: 1px solid #21293a;
+  border-radius: 14px;
+  padding: 20px 22px 22px;
+}
+
+.card h2 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #7dd3fc;
+  margin-bottom: 3px;
+}
+
+.card .why {
+  font-size: 0.72rem;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.wrap {
+  position: relative;
+  height: 320px;
+}
+
+/* Heatmap */
+#heatmapWrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 320px;
+  padding-right: 4px;
+}
+
+#heatmapWrap table {
+  border-collapse: collapse;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+#heatmapWrap th {
+  background: #0d1117;
+  color: #64748b;
+  padding: 3px 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  font-weight: 500;
+}
+
+#heatmapWrap td {
+  width: 28px;
+  height: 22px;
+  text-align: center;
+  border: 1px solid #0d1117;
+  font-size: 9px;
+  font-weight: 600;
+  cursor: default;
+  border-radius: 3px;
+}
+
+/* Legend pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin: 4px 10px 0 0;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Stats row (chart ③) */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.stat {
+  background: #0d1117;
+  border: 1px solid #21293a;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.stat .lbl {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #475569;
+}
+
+.stat .val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+/* Heatmap hover tooltip */
+#tooltip {
+  position: fixed;
+  background: #1e2232;
+  border: 1px solid #3b4262;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  pointer-events: none;
+  display: none;
+  z-index: 999;
+  line-height: 1.6;
+}
