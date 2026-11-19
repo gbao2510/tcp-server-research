@@ -1,0 +1,162 @@
+[
+  {
+    "client_id": 1,
+    "seq": 0,
+    "t_start": 0.036049,
+    "latency_ms": 6.4542,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 1,
+    "t_start": 0.071823,
+    "latency_ms": 0.7695,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 2,
+    "t_start": 0.09311,
+    "latency_ms": 0.7323,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 3,
+    "t_start": 0.114433,
+    "latency_ms": 0.3055,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 4,
+    "t_start": 0.135195,
+    "latency_ms": 0.3005,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 5,
+    "t_start": 0.155738,
+    "latency_ms": 0.3249,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 6,
+    "t_start": 0.176986,
+    "latency_ms": 0.6071,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 7,
+    "t_start": 0.197947,
+    "latency_ms": 0.7634,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 8,
+    "t_start": 0.220369,
+    "latency_ms": 0.6001,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 9,
+    "t_start": 0.243341,
+    "latency_ms": 0.4609,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 10,
+    "t_start": 0.264136,
+    "latency_ms": 0.5364,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 11,
+    "t_start": 0.285541,
+    "latency_ms": 0.7217,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 12,
+    "t_start": 0.307349,
+    "latency_ms": 0.9215,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 13,
+    "t_start": 0.330864,
+    "latency_ms": 0.8983,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 14,
+    "t_start": 0.352615,
+    "latency_ms": 0.5398,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 15,
+    "t_start": 0.373658,
+    "latency_ms": 0.3054,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 16,
+    "t_start": 0.39453,
+    "latency_ms": 0.5928,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 17,
+    "t_start": 0.415724,
+    "latency_ms": 0.6174,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 18,
+    "t_start": 0.436928,
+    "latency_ms": 0.4702,
+    "ok": true,
+    "error": ""
+  },
+  {
+    "client_id": 1,
+    "seq": 19,
+    "t_start": 0.458071,
+    "latency_ms": 1.0909,
+    "ok": true,
+    "error": ""
+  }
+]

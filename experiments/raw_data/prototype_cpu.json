@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "available": true,
+    "backend": "psutil",
+    "samples_count": 4,
+    "cpu_avg": 56.12,
+    "cpu_min": 49.3,
+    "cpu_max": 60.0
+  },
+  "samples": [
+    {
+      "timestamp_s": 0.1065,
+      "cpu_percent": 59.3
+    },
+    {
+      "timestamp_s": 0.2071,
+      "cpu_percent": 49.3
+    },
+    {
+      "timestamp_s": 0.3078,
+      "cpu_percent": 60.0
+    },
+    {
+      "timestamp_s": 0.4089,
+      "cpu_percent": 55.9
+    }
+  ]
+}
