@@ -147,7 +147,7 @@ class TestCpuMonitor(unittest.TestCase):
 
 
 class TestJSONExport(unittest.TestCase):
-    """Kiểm thử tính năng xuất và đọc dữ liệu thô dạng JSON (Trần Thuận Trí)."""
+    """Kiểm thử tính năng xuất và đọc dữ liệu thô dạng JSON (Trần Trung Trực - Metrics Dev)."""
 
     def test_json_roundtrip(self):
         samples = [
@@ -173,7 +173,7 @@ class TestJSONExport(unittest.TestCase):
 
 
 class TestCPUExport(unittest.TestCase):
-    """Kiểm thử tính năng xuất dữ liệu thô CPU ra CSV và JSON (Trần Thuận Trí)."""
+    """Kiểm thử tính năng xuất dữ liệu thô CPU ra CSV và JSON (Trần Trung Trực - Metrics Dev)."""
 
     def test_cpu_csv_export(self):
         timestamps = [0.1, 0.2, 0.3]
@@ -228,7 +228,7 @@ class TestCPUExport(unittest.TestCase):
 
 
 class TestExportAllRawData(unittest.TestCase):
-    """Kiểm thử tính năng xuất trọn bộ dữ liệu thô (Trần Thuận Trí)."""
+    """Kiểm thử tính năng xuất trọn bộ dữ liệu thô (Trần Trung Trực - Metrics Dev)."""
 
     def test_export_all(self):
         samples = [

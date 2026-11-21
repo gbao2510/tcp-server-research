@@ -1,9 +1,11 @@
 """Module thu thập, tính toán và xuất số liệu đo lường hiệu năng TCP Server.
+Tác giả: Trần Trung Trực (Metrics & Test Script Dev).
+
 Chức năng:
 - Định nghĩa cấu trúc mẫu đo Sample (client_id, seq, t_start, latency_ms, ok, error).
 - Tính toán Throughput (req/s), Latency trung bình, p95, p99, min, max.
 - Hỗ trợ loại bỏ thời gian khởi động (warmup).
-- Xuất/nhập dữ liệu thô dạng CSV vào thư mục raw-data / experiments/raw_data.
+- Xuất toàn bộ dữ liệu thô (thời gian phản hồi, CPU) ra định dạng CSV và JSON vào thư mục experiments/raw_data/.
 """
 from __future__ import annotations
 
