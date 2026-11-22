@@ -1,4 +1,6 @@
 """Module giám sát tài nguyên hệ thống (CPU).
+Tác giả: Trần Trung Trực (Metrics & Test Script Dev).
+
 Chức năng:
 - Thu thập phần trăm sử dụng CPU (% CPU usage) theo chu kỳ định trước bằng daemon thread.
 - Ưu tiên sử dụng thư viện `psutil` nếu có.
