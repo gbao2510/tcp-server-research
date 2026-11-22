@@ -1,12 +1,9 @@
 """Script tự động chạy thực nghiệm và xuất toàn bộ dữ liệu thô ra file CSV/JSON.
-Tác giả: Trần Thuận Trí (Data Analytics Dev) & Nhóm Lập trình mạng.
+Tác giả: Trần Trung Trực (Metrics & Test Script Dev).
 
-Mục tiêu:
-1. Chạy đo lường hiệu năng TCP Server lần lượt qua 3 kịch bản: 1 Client, 10 Client, 50 Client.
-2. Giám sát thời gian phản hồi (latency) của từng request và mức sử dụng CPU theo thời gian.
-3. Xuất toàn bộ dữ liệu thô thu được vào thư mục `experiments/raw_data/` dưới cả 2 định dạng:
-   - File CSV: để dễ mở bằng Excel.
-   - File JSON: để dễ dùng cho các script phân tích hoặc tích hợp hệ thống.
+Nhiệm vụ (Giai đoạn 15/11 - 18/11):
+1. Viết script tự động chạy các mức Client (1, 10, 50).
+2. Lưu toàn bộ dữ liệu thô (thời gian phản hồi, CPU) ra file CSV/JSON vào thư mục `experiments/raw_data/`.
 """
 
 from __future__ import annotations
@@ -256,7 +253,7 @@ def run_scenario(
     print(f"  Mức sử dụng CPU trung bình: {cpu_stats.get('cpu_avg', 0)}% (Min: {cpu_stats.get('cpu_min', 0)}%, Max: {cpu_stats.get('cpu_max', 0)}%)")
     print(f"  Số mẫu CPU thu thập được  : {cpu_stats.get('samples_count', 0)} mẫu")
 
-    # 8. XUẤT TOÀN BỘ DỮ LIỆU THÔ RA CẢ FILE CSV VÀ FILE JSON (Nhiệm vụ của Trần Thuận Trí)
+    # 8. XUẤT TOÀN BỘ DỮ LIỆU THÔ RA CẢ FILE CSV VÀ FILE JSON (Nhiệm vụ của Trần Trung Trực - Metrics Dev)
     saved_files = export_all_raw_data(
         output_dir=raw_data_dir,
         scenario_name=scenario_name,
@@ -296,7 +293,7 @@ def main() -> int:
 
     print("=" * 65)
     print("   CHƯƠNG TRÌNH THỰC NGHIỆM HIỆU NĂNG TCP SERVER (NHÓM LẬP TRÌNH MẠNG)")
-    print("   Phụ trách xuất dữ liệu thô (CSV/JSON): Trần Thuận Trí")
+    print("   Phụ trách thực nghiệm & xuất dữ liệu thô (CSV/JSON): Trần Trung Trực (Metrics Dev)")
     print("=" * 65)
 
     # Kiểm tra xem Server đã bật chưa, nếu chưa thì tự động bật server ngầm
