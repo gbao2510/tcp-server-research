@@ -1,0 +1,36 @@
+# Cấu hình kịch bản thực nghiệm đo hiệu năng TCP Server
+# Tham số chuẩn theo yêu cầu đồ án (Khuyến nghị 1KB payload, các mốc 1, 10, 50 client)
+
+server:
+  host: "127.0.0.1"
+  port: 9000
+  timeout_seconds: 10.0
+
+protocol:
+  framing: "Length-Prefix (4 bytes Big-Endian UInt32) + JSON UTF-8"
+  payload_size_bytes: 1024  # 1 KB payload cố định
+  request_type: "echo"
+
+benchmarks:
+  scenarios:
+    - clients: 1
+      requests_per_client: 20
+      description: "Đo lường độ trễ chuẩn (Baseline Latency) cho kết nối đơn"
+    - clients: 10
+      requests_per_client: 20
+      description: "Đo lường hiệu năng đồng thời mức trung bình (10 clients)"
+    - clients: 50
+      requests_per_client: 20
+      description: "Đo lường ngưỡng bão hòa và độ trễ phân vị khi tải cao (50 clients)"
+
+execution:
+  warmup_seconds: 5.0
+  measurement_duration_seconds: 20.0
+  repeat_runs: 3
+  metrics:
+    - "latency_mean_ms"
+    - "latency_p95_ms"
+    - "latency_p99_ms"
+    - "throughput_rps"
+    - "cpu_utilization_percent"
+    - "error_rate_percent"

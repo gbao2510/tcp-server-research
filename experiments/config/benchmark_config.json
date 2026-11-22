@@ -1,0 +1,34 @@
+{
+  "_comment": "Cấu hình kịch bản đo lường hiệu năng TCP Server (1, 10, 50 Clients)",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 9000,
+    "timeout_seconds": 10.0
+  },
+  "protocol": {
+    "header_format": ">I",
+    "header_size_bytes": 4,
+    "payload_size_bytes": 1024,
+    "encoding": "utf-8"
+  },
+  "scenarios": [
+    {
+      "clients": 1,
+      "requests_per_client": 20,
+      "warmup_seconds": 5.0,
+      "description": "Baseline: 1 Client, 20 requests"
+    },
+    {
+      "clients": 10,
+      "requests_per_client": 20,
+      "warmup_seconds": 5.0,
+      "description": "Medium load: 10 Clients, 200 requests"
+    },
+    {
+      "clients": 50,
+      "requests_per_client": 20,
+      "warmup_seconds": 5.0,
+      "description": "High load: 50 Clients, 1000 requests"
+    }
+  ]
+}
